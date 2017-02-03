@@ -1,0 +1,21 @@
+{
+  "name": "drishti",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jayadeep KM",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^14.0.0",
+    "gulp": "^3.9.1",
+    "gulp-server-livereload": "^1.9.2",
+    "gulp-sourcemaps": "^2.4.0",
+    "lodash.assign": "^4.2.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.9.0"
+  }
+}
