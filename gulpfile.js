@@ -12,7 +12,7 @@ var server = require('gulp-server-livereload');
 
 // add custom browserify options here
 var customOpts = {
-    entries: ['./src/index.js'],
+    entries: ['./src/js/index.js'],
     debug: true
 };
 var opts = assign({}, watchify.args, customOpts);
@@ -20,6 +20,8 @@ var b = watchify(browserify(opts));
 
 // add transformations here
 // i.e. b.transform(coffeeify);
+
+b.transform('browserify-css',{autoinject:true})
 
 gulp.task('js', bundle); // so you can run `gulp js` to build the file
 b.on('update', bundle); // on any dep update, runs the bundler
@@ -36,7 +38,7 @@ function bundle() {
         .pipe(sourcemaps.init({ loadMaps: true })) // loads map from browserify file
         // Add transformation tasks to the pipeline here.
         .pipe(sourcemaps.write('./')) // writes .map file
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./dist/js'));
 }
 
 

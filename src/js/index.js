@@ -1,4 +1,7 @@
+//css
+
 require('../css/main.css')
 
 
-alert('bpp')
+//js
+require('jquery')
